@@ -1,6 +1,6 @@
 {% set name = "smart_open" %}
-{% set version = "1.3.5" %}
-{% set sha256 = "379bec2c08c518a30fe58e781abcae8d4e58bc0024c950f13d55ebcc899e3aba" %}
+{% set version = "1.5.2" %}
+{% set sha256 = "231ed7aa30d077c6a2d373fce2858d496db18f1d4b6b2403e875551953347cda" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
