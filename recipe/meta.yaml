@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Python library for efficient streaming of large files'
+  summary: 'Python library for efficient streaming of large files'
 
   description: |
     smart_open is a Python 2 & Python 3 library 
