@@ -1,6 +1,6 @@
 {% set name = "smart_open" %}
-{% set version = "1.5.3" %}
-{% set sha256 = "fad4669acc2e6eb290b87265813cdb767e455e5f60f34af609da0c775c38b254" %}
+{% set version = "1.5.6" %}
+{% set sha256 = "8fd2de1c359bd0074bd6d334a5b9820ae1c5b6ba563970b95052bace4b71baeb" %}
 
 package:
   name: {{ name|lower }}
@@ -28,6 +28,9 @@ requirements:
     - requests
 
 test:
+  requires:
+    - boto3
+    - mock
   imports:
     - smart_open
     - smart_open.tests
@@ -48,4 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - souravsingh
-    - tmylk
+    - menshikh-iv
