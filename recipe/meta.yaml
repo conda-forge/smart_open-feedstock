@@ -28,6 +28,9 @@ requirements:
     - requests
 
 test:
+  requires:
+    - boto3
+    - mock
   imports:
     - smart_open
     - smart_open.tests
@@ -48,4 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - souravsingh
-    - tmylk
+    - menshikh-iv
