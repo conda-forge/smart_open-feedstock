@@ -22,7 +22,7 @@ requirements:
 
   run:
     - python
-    - boto>=2.32
+    - boto >=2.32
     - bz2file
     - requests
     - boto3
@@ -30,7 +30,7 @@ requirements:
 test:
   requires:
     - mock
-    - moto==0.4.31
+    - moto ==0.4.31
     - responses
   imports:
     - smart_open
