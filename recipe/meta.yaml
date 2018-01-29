@@ -30,7 +30,6 @@ requirements:
 test:
   requires:
     - mock
-    - moto ==0.4.31
     - responses
   imports:
     - smart_open
