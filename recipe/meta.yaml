@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -20,17 +20,17 @@ requirements:
     - python
     - setuptools
 
-    
   run:
     - python
     - boto >=2.32
     - bz2file
     - requests
+    - boto3
 
 test:
   requires:
-    - boto3
     - mock
+    - responses
   imports:
     - smart_open
     - smart_open.tests
