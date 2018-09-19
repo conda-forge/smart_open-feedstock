@@ -21,7 +21,7 @@ jobs:
             echo "CONDA_PY=${CONDA_PY}"
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
-          command: ./ci_support/run_docker_build.sh
+          command: ./circleci/run_docker_build.sh
   build__CONDA_PY_35:
     working_directory: ~/test
     machine: true
@@ -42,7 +42,7 @@ jobs:
             echo "CONDA_PY=${CONDA_PY}"
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
-          command: ./ci_support/run_docker_build.sh
+          command: ./circleci/run_docker_build.sh
   build__CONDA_PY_36:
     working_directory: ~/test
     machine: true
@@ -63,7 +63,7 @@ jobs:
             echo "CONDA_PY=${CONDA_PY}"
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
-          command: ./ci_support/run_docker_build.sh
+          command: ./circleci/run_docker_build.sh
 
 workflows:
   version: 2
