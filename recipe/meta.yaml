@@ -1,6 +1,6 @@
 {% set name = "smart_open" %}
-{% set version = "1.8.2" %}
-{% set sha256 = "d3c16477ad7e8f94ab033630ea31993670ad21153172367db1acb143077d501c" %}
+{% set version = "1.8.3" %}
+{% set sha256 = "305aee26b4fcc68f6ef8a8a851f27335b8b81bb9f2f030fd2574276cb4052b09" %}
 
 package:
   name: {{ name|lower }}
