@@ -26,6 +26,7 @@ requirements:
     - bz2file
     - requests
     - boto3
+    - google-cloud-storage
 
 test:
   requires:
