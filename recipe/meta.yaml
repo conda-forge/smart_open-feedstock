@@ -1,6 +1,6 @@
 {% set name = "smart_open" %}
-{% set version = "1.9.0" %}
-{% set sha256 = "e64c2b5e62a452fa7fc4d21aecbada826ca21097bbe117841f8f4fc53dbab676" %}
+{% set version = "1.10.0" %}
+{% set sha256 = "bea5624c0c2e49987c227bdf3596573157eccd96fd1d53198856c8d53948fa2c" %}
 
 package:
   name: {{ name|lower }}
@@ -41,7 +41,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python library for efficient streaming of large files'
+  summary: Python library for efficient streaming of large files
 
   description: |
     smart_open is a Python 2 & Python 3 library 
