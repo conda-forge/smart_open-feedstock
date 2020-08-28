@@ -5,7 +5,7 @@ Home: https://github.com/RaRe-Technologies/smart_open
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python library for efficient streaming of large files
 
