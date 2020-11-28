@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >= 3.6
     - pip
   run:
-    - python
+    - python >= 3.6
     - boto >=2.32
     - bz2file
     - requests
@@ -44,7 +44,7 @@ about:
   summary: Python library for efficient streaming of large files
 
   description: |
-    smart_open is a Python 2 & Python 3 library 
+    smart_open is a Python 3 library 
     for efficient streaming of very large files
     from/to S3, HDFS, WebHDFS or local (compressed) files. 
   dev_url: https://github.com/RaRe-Technologies/smart_open
