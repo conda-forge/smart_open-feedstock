@@ -11,7 +11,7 @@ Summary: Python library for efficient streaming of large files
 
 Development: https://github.com/RaRe-Technologies/smart_open
 
-smart_open is a Python 2 & Python 3 library
+smart_open is a Python 3 library
 for efficient streaming of very large files
 from/to S3, HDFS, WebHDFS or local (compressed) files.
 
