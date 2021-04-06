@@ -23,10 +23,12 @@ requirements:
   run:
     - python >=3.6
     - boto >=2.32
-    - bz2file
     - requests
     - boto3
     - google-cloud-storage
+    - azure-storage-blob
+    - azure-common
+    - azure-core
 
 test:
   requires:
