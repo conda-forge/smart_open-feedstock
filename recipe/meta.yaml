@@ -34,7 +34,6 @@ test:
     - responses
   imports:
     - smart_open
-    - smart_open.tests
 
 about:
   home: https://github.com/RaRe-Technologies/smart_open
