@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -22,13 +22,6 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - boto >=2.32
-    - requests
-    - boto3
-    - google-cloud-storage
-    - azure-storage-blob
-    - azure-common
-    - azure-core
 
 test:
   imports:
