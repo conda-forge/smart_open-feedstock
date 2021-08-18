@@ -1,6 +1,6 @@
 {% set name = "smart_open" %}
-{% set version = "5.1.0" %}
-{% set sha256 = "e4dc1350b240ef0759e343e4e2f361bfd4e5477bb2619866e97f80240652e92e" %}
+{% set version = "5.2.0" %}
+{% set sha256 = "308f439ed01a8c7a97727c354e80d1786acadd2ae1cdd190fc787bb1f48c1245" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
