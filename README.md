@@ -34,6 +34,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open-green.svg)](https://anaconda.org/conda-forge/smart-open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open.svg)](https://anaconda.org/conda-forge/smart-open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open.svg)](https://anaconda.org/conda-forge/smart-open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open.svg)](https://anaconda.org/conda-forge/smart-open) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart_open-green.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) |
 
 Installing smart_open
@@ -46,41 +47,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `smart_open` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `smart-open, smart_open` can be installed with `conda`:
 
 ```
-conda install smart_open
-```
-
-or with `mamba`:
-
-```
-mamba install smart_open
-```
-
-It is possible to list all of the versions of `smart_open` available on your platform with `conda`:
-
-```
-conda search smart_open --channel conda-forge
+conda install smart-open smart_open
 ```
 
 or with `mamba`:
 
 ```
-mamba search smart_open --channel conda-forge
+mamba install smart-open smart_open
+```
+
+It is possible to list all of the versions of `smart-open` available on your platform with `conda`:
+
+```
+conda search smart-open --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search smart-open --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search smart_open --channel conda-forge
+mamba repoquery search smart-open --channel conda-forge
 
-# List packages depending on `smart_open`:
-mamba repoquery whoneeds smart_open --channel conda-forge
+# List packages depending on `smart-open`:
+mamba repoquery whoneeds smart-open --channel conda-forge
 
-# List dependencies of `smart_open`:
-mamba repoquery depends smart_open --channel conda-forge
+# List dependencies of `smart-open`:
+mamba repoquery depends smart-open --channel conda-forge
 ```
 
 
