@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -26,6 +26,17 @@ requirements:
 test:
   imports:
     - smart_open
+
+outputs:
+   - name: smart_open
+   - name: smart-open
+     build:
+       noarch: python
+     requirements:
+       host:
+         - python
+       run:
+         - {{ pin_subpackage("smart_open", exact=True) }}
 
 about:
   home: https://github.com/RaRe-Technologies/smart_open
