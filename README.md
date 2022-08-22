@@ -153,4 +153,5 @@ Feedstock Maintainers
 
 * [@mpenkov](https://github.com/mpenkov/)
 * [@souravsingh](https://github.com/souravsingh/)
+* [@timkpaine](https://github.com/timkpaine/)
 
