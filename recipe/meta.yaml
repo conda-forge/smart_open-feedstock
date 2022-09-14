@@ -1,6 +1,6 @@
 {% set name = "smart_open" %}
-{% set version = "6.1.0" %}
-{% set sha256 = "c8fd9e9f90f0e285f1346481b0ae0fb57bd04b1138826c5e826ee98b2029d7f3" %}
+{% set version = "6.2.0" %}
+{% set sha256 = "1b4df5c8365218f3852c507451920ccad606c80b0acb4e67508e50ba9b5d2632" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -31,15 +31,15 @@ test:
     - smart_open
 
 outputs:
-   - name: smart_open
-   - name: smart-open
-     build:
-       noarch: python
-     requirements:
-       host:
-         - python
-       run:
-         - {{ pin_subpackage("smart_open", exact=True) }}
+  - name: smart_open
+  - name: smart-open
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python
+      run:
+        - {{ pin_subpackage("smart_open", exact=True) }}
 
 about:
   home: https://github.com/RaRe-Technologies/smart_open
