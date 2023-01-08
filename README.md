@@ -35,6 +35,13 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open-green.svg)](https://anaconda.org/conda-forge/smart-open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open.svg)](https://anaconda.org/conda-forge/smart-open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open.svg)](https://anaconda.org/conda-forge/smart-open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open.svg)](https://anaconda.org/conda-forge/smart-open) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--all-green.svg)](https://anaconda.org/conda-forge/smart-open-with-all) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-all.svg)](https://anaconda.org/conda-forge/smart-open-with-all) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-all.svg)](https://anaconda.org/conda-forge/smart-open-with-all) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-all.svg)](https://anaconda.org/conda-forge/smart-open-with-all) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--azure-green.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-azure.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-azure.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-azure.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--gcs-green.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-gcs.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-gcs.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-gcs.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--http-green.svg)](https://anaconda.org/conda-forge/smart-open-with-http) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-http.svg)](https://anaconda.org/conda-forge/smart-open-with-http) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-http.svg)](https://anaconda.org/conda-forge/smart-open-with-http) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-http.svg)](https://anaconda.org/conda-forge/smart-open-with-http) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--s3-green.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--ssh-green.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--webhdfs-green.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart_open-green.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) |
 
 Installing smart_open
@@ -47,16 +54,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `smart-open, smart_open` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `smart-open, smart-open-with-all, smart-open-with-azure, smart-open-with-gcs, smart-open-with-http, smart-open-with-s3, smart-open-with-ssh, smart-open-with-webhdfs, smart_open` can be installed with `conda`:
 
 ```
-conda install smart-open smart_open
+conda install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart_open
 ```
 
 or with `mamba`:
 
 ```
-mamba install smart-open smart_open
+mamba install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart_open
 ```
 
 It is possible to list all of the versions of `smart-open` available on your platform with `conda`:
@@ -151,6 +158,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@mpenkov](https://github.com/mpenkov/)
 * [@souravsingh](https://github.com/souravsingh/)
 * [@timkpaine](https://github.com/timkpaine/)
