@@ -1,11 +1,11 @@
-About smart_open
-================
+About smart_open-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/smart_open-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/RaRe-Technologies/smart_open
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/smart_open-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python library for efficient streaming of large files
 
