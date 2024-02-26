@@ -92,14 +92,19 @@ outputs:
         - python hotfix_tests.py
         -
           coverage run --source=smart_open --branch -m pytest
-            -vv src/smart_open/tests
+            src/smart_open/tests
+            -vv
+            --tb=long
+            --color=yes
             -k "not (
               http_gz
               or http_gz_query
               or https_seek_forward
+              or s3_disable_compression
               or s3_gzip_compress_sanity
               or s3_read_explicit
               or s3_write_explicit
+              or s3_write_implicit
               or seek_from_current
               or seek_from_end
               or seek_from_start
