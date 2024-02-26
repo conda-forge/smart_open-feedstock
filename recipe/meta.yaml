@@ -32,13 +32,14 @@ outputs:
     build:
       noarch: python
       script:
-        - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv
+        - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
     requirements:
       host:
         - {{ min_python }}
         - pip
       run:
         - {{ min_python }}
+        - wrapt
     test:
       imports:
         - smart_open
@@ -52,10 +53,7 @@ outputs:
     build:
       noarch: generic
     requirements:
-      host:
-        - {{ min_python }}
       run:
-        - {{ min_python }}
         - {{ pin_subpackage("smart_open", exact=True) }}
     test:
       imports:
