@@ -1,5 +1,6 @@
 {% set all_pytest_args = "--cov-fail-under=36" %}
-{% set version = "6.4.0" %}
+{% set all_pytest_args = "--cov-fail-under=36" %}
+{% set version = "7.0.1" %}
 {% set all_pytest_args = "--cov-fail-under=36" %}
 
 package:
@@ -9,10 +10,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/s/smart_open/smart_open-{{ version }}.tar.gz
-    sha256: be3c92c246fbe80ebce8fbacb180494a481a77fcdcb7c1aadb2ea5b9c2bee8b9
+    sha256: c03d00e49483d8e5375720d4d6c1402107f23584bf96505db0b4e17f92339e56
   - folder: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 9b17cb6a195ef0713c71efe6b48b6fc6f756737972c4e3ddb845799a477b6c3d
+    sha256: 95b942e6075a9216848eb7264b5d66963d916361e9c9c40f771559948649feaf
 
 build:
   noarch: python
