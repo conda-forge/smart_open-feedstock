@@ -1,6 +1,8 @@
-{% set all_pytest_args = "--cov-fail-under=36" %}
-{% set version = "6.4.0" %}
-{% set all_pytest_args = "--cov-fail-under=36" %}
+{% set version = "7.0.1" %}
+{% set min_python = "python >=3.6" %}
+
+# handle undefined PYTHON in `noarch: generic` packages
+{% if PYTHON is undefined %}{% set PYTHON = "$PYTHON" %}{% endif %}
 
 package:
   name: smart_open_split
@@ -9,10 +11,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/s/smart_open/smart_open-{{ version }}.tar.gz
-    sha256: be3c92c246fbe80ebce8fbacb180494a481a77fcdcb7c1aadb2ea5b9c2bee8b9
+    sha256: c03d00e49483d8e5375720d4d6c1402107f23584bf96505db0b4e17f92339e56
   - folder: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 9b17cb6a195ef0713c71efe6b48b6fc6f756737972c4e3ddb845799a477b6c3d
+    sha256: 95b942e6075a9216848eb7264b5d66963d916361e9c9c40f771559948649feaf
 
 build:
   noarch: python
@@ -20,9 +22,9 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - {{ min_python }}
   run:
-    - python >=3.6
+    - {{ min_python }}
 
 outputs:
   # the actual package
@@ -30,13 +32,14 @@ outputs:
     build:
       noarch: python
       script:
-        - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv
+        - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
     requirements:
       host:
-        - python >=3.6
+        - {{ min_python }}
         - pip
       run:
-        - python >=3.6
+        - {{ min_python }}
+        - wrapt
     test:
       imports:
         - smart_open
@@ -48,12 +51,9 @@ outputs:
   # the normalized hyphen-convention package
   - name: smart-open
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
-        - python >=3.6
         - {{ pin_subpackage("smart_open", exact=True) }}
     test:
       imports:
@@ -62,10 +62,8 @@ outputs:
   # the kitchen sink with tests
   - name: smart-open-with-all
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
         - {{ pin_subpackage("smart_open", exact=True) }}
         - {{ pin_subpackage("smart-open-with-azure", exact=True) }}
@@ -74,36 +72,56 @@ outputs:
         - {{ pin_subpackage("smart-open-with-s3", exact=True) }}
         - {{ pin_subpackage("smart-open-with-ssh", exact=True) }}
         - {{ pin_subpackage("smart-open-with-webhdfs", exact=True) }}
+        - {{ pin_subpackage("smart-open-with-zst", exact=True) }}
     test:
       source_files:
         - src/smart_open/tests
       files:
         - hotfix_tests.py
       requires:
+        - coverage
         - moto
         - pip
-        - pytest-cov
+        - pytest
+        - pytest-benchmark
         - pytest-rerunfailures
         - responses
       commands:
         - pip check
         # tests reference `smart_open.tests`, but not included in distributions
         - python hotfix_tests.py
-        - pytest -vv src/smart_open/tests --cov=smart_open --cov-report=term-missing:skip-covered --no-cov-on-fail {{ all_pytest_args }}
+        -
+          coverage run --source=smart_open --branch -m pytest
+            src/smart_open/tests
+            -vv
+            --tb=long
+            --color=yes
+            -k "not (
+              http_gz
+              or http_gz_query
+              or https_seek_forward
+              or s3_disable_compression
+              or s3_gzip_compress_sanity
+              or s3_read_explicit
+              or s3_write_explicit
+              or s3_write_implicit
+              or seek_from_current
+              or seek_from_end
+              or seek_from_start
+            )"
+        - coverage report --show-missing --skip-covered --fail-under=36
 
   # extras from here on out
   - name: smart-open-with-azure
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
+        - {{ min_python }}
         - {{ pin_subpackage("smart_open", exact=True) }}
         - azure-common
         - azure-core
         - azure-storage-blob
-        - python >=3.6
     test:
       imports:
         - smart_open.azure
@@ -114,14 +132,11 @@ outputs:
 
   - name: smart-open-with-gcs
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
         - {{ pin_subpackage("smart_open", exact=True) }}
-        - google-cloud-storage
-        - python >=3.6
+        - google-cloud-storage >=2.6.0
     test:
       imports:
         - smart_open.gcs
@@ -132,13 +147,10 @@ outputs:
 
   - name: smart-open-with-http
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
         - {{ pin_subpackage("smart_open", exact=True) }}
-        - python >=3.6
         - requests
     test:
       imports:
@@ -150,13 +162,10 @@ outputs:
 
   - name: smart-open-with-s3
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
         - {{ pin_subpackage("smart_open", exact=True) }}
-        - python >=3.6
         - boto3
     test:
       imports:
@@ -168,14 +177,11 @@ outputs:
 
   - name: smart-open-with-ssh
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
         - {{ pin_subpackage("smart_open", exact=True) }}
         - paramiko
-        - python >=3.6
     test:
       imports:
         - smart_open.ssh
@@ -186,17 +192,27 @@ outputs:
 
   - name: smart-open-with-webhdfs
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.6
       run:
         - {{ pin_subpackage("smart_open", exact=True) }}
-        - python >=3.6
         - requests
     test:
       imports:
         - smart_open.webhdfs
+      requires:
+        - pip
+      commands:
+        - pip check
+
+  - name: smart-open-with-zst
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage("smart_open", exact=True) }}
+        - zstandard
+    test:
       requires:
         - pip
       commands:

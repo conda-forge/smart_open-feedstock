@@ -42,6 +42,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--s3-green.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--ssh-green.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--webhdfs-green.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--zst-green.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-zst.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-zst.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-zst.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart_open-green.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) |
 
 Installing smart_open
@@ -54,16 +55,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `smart-open, smart-open-with-all, smart-open-with-azure, smart-open-with-gcs, smart-open-with-http, smart-open-with-s3, smart-open-with-ssh, smart-open-with-webhdfs, smart_open` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `smart-open, smart-open-with-all, smart-open-with-azure, smart-open-with-gcs, smart-open-with-http, smart-open-with-s3, smart-open-with-ssh, smart-open-with-webhdfs, smart-open-with-zst, smart_open` can be installed with `conda`:
 
 ```
-conda install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart_open
+conda install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
 ```
 
 or with `mamba`:
 
 ```
-mamba install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart_open
+mamba install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
 ```
 
 It is possible to list all of the versions of `smart-open` available on your platform with `conda`:
@@ -110,7 +111,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
