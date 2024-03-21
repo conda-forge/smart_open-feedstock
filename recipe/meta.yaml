@@ -1,5 +1,6 @@
 {% set min_python = "python >=3.6" %}
-{% set version = "7.0.2" %}
+{% set min_python = "python >=3.6" %}
+{% set version = "7.0.3" %}
 {% set min_python = "python >=3.6" %}
 
 # handle undefined PYTHON in `noarch: generic` packages
@@ -12,10 +13,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/s/smart_open/smart_open-{{ version }}.tar.gz
-    sha256: f109517702453c3fa5ac60178698138b618d3670c2f1f0993ee8ce27193d3341
+    sha256: dfea0d6815798f843fd2f4dbeb2ddf2d4a2304ece749c5251a97ac5f2dcb1a8e
   - folder: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 7da644c6be64b0ef4f8df29b11f435966442a595f1440f1c92fb9de3ef1e35e8
+    sha256: 693203d127aac0ce80c1b3daeff6d31fc1dae461500fb52b7851380ce88fbc72
 
 build:
   noarch: python
