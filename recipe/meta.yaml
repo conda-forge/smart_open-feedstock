@@ -1,12 +1,10 @@
-{% set min_python = "python >=3.6" %}
 {% set version = "7.0.5" %}
-{% set min_python = "python >=3.6" %}
 
 # handle undefined PYTHON in `noarch: generic` packages
 {% if PYTHON is undefined %}{% set PYTHON = "$PYTHON" %}{% endif %}
 
 package:
-  name: smart_open_split
+  name: smart_open
   version: {{ version }}
 
 source:
@@ -18,47 +16,31 @@ source:
     sha256: 1ab6e3754c1866ec94e21219c4d563d3f6832e2c41b1a4f2dbbdf6b041b1c2d1
 
 build:
+  numer: 1
   noarch: python
-  number: 0
+  script:
+    - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
-    - {{ min_python }}
+    - pip
+    - python >=3.7
+    - setuptools
+    - wheel
   run:
-    - {{ min_python }}
+    - python >=3.7
+    - wrapt
+test:
+  imports:
+    - smart_open
+  requires:
+    - pip
+  commands:
+    - pip check
 
 outputs:
   # the actual package
   - name: smart_open
-    build:
-      noarch: python
-      script:
-        - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
-    requirements:
-      host:
-        - {{ min_python }}
-        - pip
-      run:
-        - {{ min_python }}
-        - wrapt
-    test:
-      imports:
-        - smart_open
-      requires:
-        - pip
-      commands:
-        - pip check
-
-  # the normalized hyphen-convention package
-  - name: smart-open
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - {{ pin_subpackage("smart_open", exact=True) }}
-    test:
-      imports:
-        - smart_open
 
   # the kitchen sink with tests
   - name: smart-open-with-all
@@ -95,13 +77,23 @@ outputs:
           seek_from_start )"
         - coverage report --show-missing --skip-covered --fail-under=35
 
+  # the normalized hyphen-convention package
+  - name: smart-open
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage("smart_open", exact=True) }}
+    test:
+      imports:
+        - smart_open
+
   # extras from here on out
   - name: smart-open-with-azure
     build:
       noarch: generic
     requirements:
       run:
-        - {{ min_python }}
         - {{ pin_subpackage("smart_open", exact=True) }}
         - azure-common
         - azure-core
