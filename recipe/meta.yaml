@@ -9,14 +9,14 @@ package:
 
 source:
   - folder: dist
-    url: https://pypi.io/packages/source/s/smart_open/smart_open-{{ version }}.tar.gz
+    url: https://pypi.org/packages/source/s/smart_open/smart_open-{{ version }}.tar.gz
     sha256: d3672003b1dbc85e2013e4983b88eb9a5ccfd389b0d4e5015f39a9ee5620ec18
   - folder: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v{{ version }}.tar.gz
     sha256: 1ab6e3754c1866ec94e21219c4d563d3f6832e2c41b1a4f2dbbdf6b041b1c2d1
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script:
     - cd dist && {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
@@ -24,17 +24,18 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - wheel
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - wrapt
 test:
   imports:
     - smart_open
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
