@@ -1,4 +1,4 @@
-{% set version = "7.1.0" %}
+{% set version = "7.3.0" %}
 
 # handle undefined PYTHON in `noarch: generic` packages
 {% if PYTHON is undefined %}{% set PYTHON = "$PYTHON" %}{% endif %}
@@ -10,10 +10,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.org/packages/source/s/smart_open/smart_open-{{ version }}.tar.gz
-    sha256: a4f09f84f0f6d3637c6543aca7b5487438877a21360e7368ccf1f704789752ba
+    sha256: 4c4b0164738212dfe7e352bf16e1b0dbf98038666f04495c681f583a7bb05166
   - folder: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 31078d5e6800cd41fd3ad8f6d32964343bdaef5ce646f220c2e3a89153e51174
+    sha256: 90dbf36a4c496df77ef8009c16c88a3e4e9c52543abd5a2fcda58bb0e4b0799d
 
 build:
   number: 0
