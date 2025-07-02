@@ -15,7 +15,6 @@ smart_open is a Python 3 library
 for efficient streaming of very large files
 from/to S3, HDFS, WebHDFS or local (compressed) files.
 
-
 Current build status
 ====================
 
@@ -43,7 +42,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--ssh-green.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--webhdfs-green.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--zst-green.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-zst.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-zst.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-zst.svg)](https://anaconda.org/conda-forge/smart-open-with-zst) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-smart_open-green.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart__open-green.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart_open.svg)](https://anaconda.org/conda-forge/smart_open) |
 
 Installing smart_open
 =====================
