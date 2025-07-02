@@ -15,7 +15,6 @@ smart_open is a Python 3 library
 for efficient streaming of very large files
 from/to S3, HDFS, WebHDFS or local (compressed) files.
 
-
 Current build status
 ====================
 
