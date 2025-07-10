@@ -28,13 +28,17 @@ outputs:
     build:
       noarch: python
       script:
-        - cd dist
-        - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+        env:
+          SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
+        content:
+          - cd dist
+          - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
         - python ${{ python_min }}.*
         - setuptools
+        - setuptools-scm
         - wheel
       run:
         - python >=${{ python_min }}
@@ -76,6 +80,7 @@ outputs:
             - python ${{ python_min }}.*
             - responses
         script:
+          - python -c "from importlib.metadata import version; v = version('smart-open'); print(v); assert v == '${{ version }}'"
           - cd src
           - coverage run --source=smart_open --branch -m pytest -vv --tb=long --color=yes -k "not ( http_gz or http_gz_query or https_seek_forward or s3_disable_compression or s3_gzip_compress_sanity or s3_read_explicit or s3_write_explicit or s3_write_implicit or seek_from_current or seek_from_end or seek_from_start )"
           - coverage report --show-missing --skip-covered --fail-under=35
