@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: "7.4.0"
-  python_max_check: "3.13"
+  version: "7.4.1"
+  python_max_check: "3.14"
 
 recipe:
   name: smart_open
@@ -12,10 +12,10 @@ recipe:
 source:
   - target_directory: dist
     url: https://pypi.org/packages/source/s/smart_open/smart_open-${{ version }}.tar.gz
-    sha256: cb989a38db774c5aadc416020dff21da6cea11059309f50e237d6520d6636247
+    sha256: 5c20f09026875e6dec708e9610e0cd13d24d91f0a2c12e6511b9e478a566b4a0
   - target_directory: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 9f86bedd0592ce5e583e7a2eff6ab93b95604c96bff88f0c2a2a7cfe99041c8b
+    sha256: 5a44dc2ef6a7137d812daf8507b7f8f16816aa2a274ace0ed5d31ebc5719e085
 
 build:
   number: 0
@@ -37,8 +37,8 @@ outputs:
       host:
         - pip
         - python ${{ python_min }}.*
-        - setuptools
-        - setuptools-scm
+        - setuptools >=64
+        - setuptools-scm >=8
         - wheel
       run:
         - python >=${{ python_min }}
@@ -207,7 +207,7 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage("smart_open", exact=True) }}
-        - zstandard
+        - backports.zstd >=1.1.0
     tests:
       - python:
           imports: smart_open
