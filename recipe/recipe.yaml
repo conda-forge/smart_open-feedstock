@@ -159,7 +159,7 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage("smart_open", exact=True) }}
-        - boto3
+        - boto3 >=1.9.17
     tests:
       - python:
           imports: smart_open
@@ -207,7 +207,7 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage("smart_open", exact=True) }}
-        - backports.zstd >=1.1.0
+        - backports.zstd >=1.0.0
     tests:
       - python:
           imports: smart_open
