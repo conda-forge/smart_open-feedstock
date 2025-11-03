@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "7.4.2"
+  version: "7.4.3"
   python_max_check: "3.14"
 
 recipe:
@@ -12,10 +12,10 @@ recipe:
 source:
   - target_directory: dist
     url: https://pypi.org/packages/source/s/smart_open/smart_open-${{ version }}.tar.gz
-    sha256: 648b5619297cb32720cdfed4ffbcb15209defb531e0904497721a9b24fdcdcac
+    sha256: f32839234a287e2cb2ecdccc5b315de34a8e79db4db729e1a864ab3b359f9fee
   - target_directory: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 46b31137c6e179b4e28f7d41de36e14d6ca223767ac496c6f2f48685ffd04f8b
+    sha256: d713c4e06ce57945b01f915f0f34209b516568eb74e1364f5ce57a6caf85e986
 
 build:
   number: 0
