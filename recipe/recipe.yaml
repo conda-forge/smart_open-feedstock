@@ -124,7 +124,7 @@ outputs:
         - ${{ pin_subpackage("smart_open", exact=True) }}
         - azure-common
         - azure-core
-        - azure-storage-blob
+        - azure-storage-blob >=12.7.0
     tests:
       - python:
           imports: smart_open
