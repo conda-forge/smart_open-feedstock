@@ -3,11 +3,150 @@ About smart_open-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/smart_open-feedstock/blob/main/LICENSE.txt)
 
+
+About smart_open
+----------------
+
 Home: https://pypi.org/project/smart-open
 
 Package license: MIT
 
-Summary: Python library for efficient streaming of large files
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...)
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-all
+-------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [all])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-azure
+---------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [azure])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-gcs
+-------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [gcs])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-http
+--------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [http])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-lz4
+-------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [lz4])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-s3
+------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [s3])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-ssh
+-------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [ssh])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-webhdfs
+-----------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [webhdfs])
+
+Development: https://github.com/RaRe-Technologies/smart_open
+
+smart_open is a Python 3 library
+for efficient streaming of very large files
+from/to S3, HDFS, WebHDFS or local (compressed) files.
+
+About smart-open-with-zst
+-------------------------
+
+Home: https://pypi.org/project/smart-open
+
+Package license: MIT
+
+Summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...) (with [zst])
 
 Development: https://github.com/RaRe-Technologies/smart_open
 
@@ -39,6 +178,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--azure-green.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-azure.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-azure.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-azure.svg)](https://anaconda.org/conda-forge/smart-open-with-azure) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--gcs-green.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-gcs.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-gcs.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-gcs.svg)](https://anaconda.org/conda-forge/smart-open-with-gcs) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--http-green.svg)](https://anaconda.org/conda-forge/smart-open-with-http) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-http.svg)](https://anaconda.org/conda-forge/smart-open-with-http) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-http.svg)](https://anaconda.org/conda-forge/smart-open-with-http) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-http.svg)](https://anaconda.org/conda-forge/smart-open-with-http) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--lz4-green.svg)](https://anaconda.org/conda-forge/smart-open-with-lz4) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-lz4.svg)](https://anaconda.org/conda-forge/smart-open-with-lz4) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-lz4.svg)](https://anaconda.org/conda-forge/smart-open-with-lz4) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-lz4.svg)](https://anaconda.org/conda-forge/smart-open-with-lz4) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--s3-green.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-s3.svg)](https://anaconda.org/conda-forge/smart-open-with-s3) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--ssh-green.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-ssh.svg)](https://anaconda.org/conda-forge/smart-open-with-ssh) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-smart--open--with--webhdfs-green.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/smart-open-with-webhdfs.svg)](https://anaconda.org/conda-forge/smart-open-with-webhdfs) |
@@ -55,16 +195,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `smart-open, smart-open-with-all, smart-open-with-azure, smart-open-with-gcs, smart-open-with-http, smart-open-with-s3, smart-open-with-ssh, smart-open-with-webhdfs, smart-open-with-zst, smart_open` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `smart-open, smart-open-with-all, smart-open-with-azure, smart-open-with-gcs, smart-open-with-http, smart-open-with-lz4, smart-open-with-s3, smart-open-with-ssh, smart-open-with-webhdfs, smart-open-with-zst, smart_open` can be installed with `conda`:
 
 ```
-conda install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
+conda install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-lz4 smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
 ```
 
 or with `mamba`:
 
 ```
-mamba install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
+mamba install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-lz4 smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
 ```
 
 It is possible to list all of the versions of `smart-open` available on your platform with `conda`:
