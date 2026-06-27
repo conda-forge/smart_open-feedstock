@@ -304,6 +304,3 @@ Feedstock Maintainers
 * [@souravsingh](https://github.com/souravsingh/)
 * [@timkpaine](https://github.com/timkpaine/)
 
-
-<!-- dummy commit to enable rerendering -->
-
