@@ -46,7 +46,7 @@ outputs:
           SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
         content:
           - cd dist
-          - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+          - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check --check-build-dependencies
     requirements:
       host:
         - pip
@@ -58,6 +58,11 @@ outputs:
         - python >=${{ python_min }}
         - wrapt
     tests:
+      - package_contents:
+          strict: true
+          site_packages:
+            - smart_open/**
+            - smart_open-${{ version }}.dist-info/**
       - python:
           imports: smart_open
           pip_check: true
