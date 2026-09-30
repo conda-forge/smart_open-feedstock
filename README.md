@@ -195,31 +195,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `smart-open, smart-open-with-all, smart-open-with-azure, smart-open-with-gcs, smart-open-with-http, smart-open-with-lz4, smart-open-with-s3, smart-open-with-ssh, smart-open-with-webhdfs, smart-open-with-zst, smart_open` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-lz4 smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-lz4 smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
 ```
 
-It is possible to list all of the versions of `smart-open` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-lz4 smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
+# for installing globally
+pixi global install smart-open smart-open-with-all smart-open-with-azure smart-open-with-gcs smart-open-with-http smart-open-with-lz4 smart-open-with-s3 smart-open-with-ssh smart-open-with-webhdfs smart-open-with-zst smart_open
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `smart-open` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search smart-open --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search smart-open --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search smart-open --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -231,6 +273,8 @@ mamba repoquery whoneeds smart-open --channel conda-forge
 # List dependencies of `smart-open`:
 mamba repoquery depends smart-open --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
