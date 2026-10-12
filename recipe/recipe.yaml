@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "8.0.2"
+  version: "8.0.3"
   python_check_max: "3.14"
   summary: Utils for streaming large files (S3, HDFS, GCS, SFTP, Azure Blob Storage, gzip, bz2, zst...)
   cov_fail_under: "84"
@@ -26,10 +26,10 @@ recipe:
 source:
   - target_directory: dist
     url: https://pypi.org/packages/source/s/smart_open/smart_open-${{ version }}.tar.gz
-    sha256: d5b5c85d2d31a6657bb18b3725856125f3b5be0ae3020c0fafa4649f6c493122
+    sha256: 398eb1d6af1e887ccd30347af540793235369bd6602dc42f72c44f939ae9c80f
   - target_directory: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: ada071f4009c754fbf6250d3a309a24b31004dfd0241d1b78880ceb6c9e1eb58
+    sha256: 6a5ec2c70afa2fd189f773c7cda935bd85920e65fb4131e54185eca70c2a8cff
 
 build:
   number: 0
