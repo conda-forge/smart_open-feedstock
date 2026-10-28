@@ -94,7 +94,7 @@ outputs:
           run:
             - coverage
             - moto
-            - pytest
+            - pytest <9.2
             - pytest-benchmark
             - pytest-rerunfailures
             - python ${{ python_min }}.*
