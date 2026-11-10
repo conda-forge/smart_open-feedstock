@@ -25,7 +25,7 @@ recipe:
 
 source:
   - target_directory: dist
-    url: https://pypi.org/packages/source/s/smart_open/smart_open-${{ version }}.tar.gz
+    url: https://files.pythonhosted.org/packages/source/s/smart_open/smart_open-${{ version }}.tar.gz
     sha256: 9911fe8cdc60834bd51a28c5d2ec16cdc8b702a24b10e1b747c9dbbbeb423746
   - target_directory: src
     url: https://github.com/RaRe-Technologies/smart_open/archive/refs/tags/v${{ version }}.tar.gz
